@@ -1,0 +1,62 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    apply from: 'versions.gradle'
+    addRepos(repositories)
+    dependencies {
+        /* classpath deps.android_gradle_plugin*/
+        classpath deps.android_gradle_plugin
+        classpath deps.kotlin.plugin
+        classpath deps.android_reaml_plugin
+        classpath 'com.jakewharton:butterknife-gradle-plugin:8.4.0'//8.8.1，不兼容
+        classpath "com.tencent.bugly:tinker-support:1.1.1"
+//        classpath deps.butterknife_gradle_plugin
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+        maven {
+            url 'https://github.com/uPhyca/stetho-realm/raw/master/maven-repo'
+        }
+        maven{
+            url 'http://192.168.0.180:8081/nexus/content/repositories/android-lib'
+        }
+    }
+}
+
+allprojects {
+    addRepos(repositories)
+    repositories {
+        jcenter()
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+        maven {
+            url 'https://github.com/uPhyca/stetho-realm/raw/master/maven-repo'
+        }
+        maven{
+            url 'http://192.168.0.180:8081/nexus/content/repositories/android-lib'
+        }
+        google()
+//        flatDir {
+//            dirs '/flatdir'
+//        }
+    }
+    subprojects {
+        project.configurations.all {
+            resolutionStrategy.eachDependency { details ->
+                if (details.requested.group == 'com.android.support'
+                        && !details.requested.name.contains('multidex')) {
+                    details.useVersion "27.0.2"
+                }
+            }
+        }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

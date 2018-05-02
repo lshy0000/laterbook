@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android" android:viewportWidth="36"
+    android:viewportHeight="36" android:width="18dp" android:height="18dp">
+    <path android:name="cls-1" android:fillColor="#999999"
+        android:pathData="M9,18a1.89,1.89,0,0,0,2,2,1.89,1.89,0,0,0,2-2,1.89,1.89,0,0,0-2-2,1.89,1.89,0,0,0-2,2Zm7.4,0a2.1,2.1,0,0,0,1,1.8,1.82,1.82,0,0,0,2,0,2.1,2.1,0,0,0,1-1.8,1.89,1.89,0,0,0-2-2,1.89,1.89,0,0,0-2,2ZM24,18a2.1,2.1,0,0,0,1,1.8,1.82,1.82,0,0,0,2,0A1.75,1.75,0,0,0,28,18a2.1,2.1,0,0,0-1-1.8,1.82,1.82,0,0,0-2,0A2.1,2.1,0,0,0,24,18Zm0,0" />
+    <path android:name="cls-1" android:fillColor="#999999"
+        android:pathData="M18.2,33a4.19,4.19,0,0,1-2.2-0.8l-2-2.4H8a5.89,5.89,0,0,1-6-6V11A5.89,5.89,0,0,1,8,5H28a5.89,5.89,0,0,1,6,6V23.8a5.89,5.89,0,0,1-6,6H22.4L20.2,32a2.46,2.46,0,0,1-2,1ZM8,7a4,4,0,0,0-4,4V23.8a4,4,0,0,0,4,4h6.8l2.6,3a1,1,0,0,0,1.4,0L21.4,28H28a4,4,0,0,0,4-4V11a4,4,0,0,0-4-4ZM8,7" />
+    <path android:name="cls-2"
+        android:pathData="M 0,0 L 36,0 L 36,36 L 0,36 z" />
+</vector>

@@ -1,0 +1,186 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/mytheme_bg_main</item>
+        <item name="colorPrimaryDark">@color/mytheme_bg_main</item>
+        <item name="colorAccent">@color/mytheme_text_main</item>
+        <item name="android:textColorPrimary">@color/mytheme_text_main</item>
+        <item name="android:colorEdgeEffect" tools:targetApi="lollipop">@color/mytheme_shadow</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:editTextStyle">@style/editstyle</item>
+        <item name="android:textCursorDrawable">@null</item>
+    </style>
+
+    <style name="NoAnimation" parent="AppTheme">
+        <item name="android:activityOpenEnterAnimation">@null</item>
+        <item name="android:activityOpenExitAnimation">@null</item>
+        <item name="android:activityCloseEnterAnimation">@null</item>
+        <item name="android:activityCloseExitAnimation">@null</item>
+        <item name="android:taskOpenEnterAnimation">@null</item>
+        <item name="android:taskOpenExitAnimation">@null</item>
+        <item name="android:taskCloseEnterAnimation">@null</item>
+        <item name="android:taskCloseExitAnimation">@null</item>
+        <item name="android:taskToFrontEnterAnimation">@null</item>
+        <item name="android:taskToFrontExitAnimation">@null</item>
+        <item name="android:taskToBackEnterAnimation">@null</item>
+        <item name="android:taskToBackExitAnimation">@null</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorControlNormal">#c3cbd6</item>
+        <item name="colorPrimary">#2f9dea</item>
+        <item name="colorPrimaryDark">#007FB7</item>
+        <item name="colorAccent">#2f9dea</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.Toolbar">
+        <item name="colorControlNormal">#fff</item>
+    </style>
+
+    <!--溢出[弹出]菜单样式 parent相当于继承【可以不要parent】-->
+    <style name="OverflowMenuStyle" parent="@style/Widget.AppCompat.PopupMenu.Overflow">
+        <!-- 是否覆盖锚点，默认为true，即盖住Toolbar -->
+        <item name="overlapAnchor">false</item>
+        <item name="android:dropDownWidth">wrap_content</item>
+        <!-- 弹出层背景颜色 -->
+        <item name="android:popupBackground">@drawable/whitekuang</item>
+        <!-- 弹出层垂直方向上的偏移，即在竖直方向上距离Toolbar的距离，值为负则会盖住Toolbar -->
+        <!--<item name="android:dropDownVerticalOffset">-100dp</item>-->
+        <!--&lt;!&ndash; 弹出层水平方向上的偏移，即距离屏幕左边的距离，负值会导致右边出现空隙 &ndash;&gt;-->
+        <!--<item name="android:dropDownHorizontalOffset">-50dp</item>-->
+        <item name="elevation">0dp</item>
+        <item name="android:textSize">@dimen/titlesize</item>
+        <item name="actionMenuTextAppearance">@style/ToolbarMenuTextSize</item>
+        <item name="actionMenuTextColor">@color/mytheme_text_main</item>
+    </style>
+
+    <style name="ToolbarMenuTextSize" parent="@style/TextAppearance.AppCompat.Menu">
+        <item name="android:textSize">@dimen/titlesize</item>
+    </style>
+
+    <style name="OverflowMenuStyle_White" parent="@style/OverflowMenuStyle">
+        <item name="actionMenuTextColor">@color/white</item>
+
+    </style>
+
+    <style name="AppTheme2" parent="Theme.AppCompat.Light">
+        <!-- Customize your theme here. -->
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="colorPrimary">@color/mytheme_bg_main</item>
+        <item name="colorPrimaryDark">@color/mytheme_bg_main</item>
+        <item name="colorAccent">@color/mytheme_text_main</item>
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <item name="android:editTextStyle">@style/editstyle</item>
+        <item name="android:fitsSystemWindows">true</item>
+    </style>
+
+    <style name="spinner_style" parent="Base.Widget.AppCompat.Spinner">
+        <item name="android:background">@drawable/spinner_background</item>
+    </style>
+
+    <style name="editstyle" parent="Base.Widget.AppCompat.EditText">
+        <item name="android:textCursorDrawable">@drawable/cursor</item>
+        <item name="android:textColor">@color/mytheme_text_main</item>
+        <item name="android:hint">@string/hint_edit</item>
+    </style>
+
+    <style name="mbasestyle">
+
+        <item name="android:textSize">@dimen/text_size_main</item>
+        <item name="android:textColor">@color/mytheme_text_main</item>
+    </style>
+
+    <style name="mbasebuttonstyle">
+
+        <item name="android:textSize">@dimen/text_size_main2</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="mbasestyle2">
+
+        <item name="android:textSize">@dimen/text_size_main2</item>
+        <item name="android:textColor">@color/mytheme_text_main</item>
+    </style>
+
+    <style name="mbasestyle3">
+
+        <item name="android:textSize">@dimen/text_size_main3</item>
+        <item name="android:textColor">@color/mytheme_text_main3</item>
+    </style>
+
+    <style name="mbasestyle4">
+
+        <item name="android:textSize">@dimen/text_size_main4</item>
+        <item name="android:textColor">@color/mytheme_text_main4</item>
+    </style>
+
+    <style name="mbasestyle5">
+
+        <item name="android:textSize">@dimen/text_size_main4</item>
+        <item name="android:textColor">@color/mytheme_text_main</item>
+    </style>
+
+    <style name="mbasestyle15">
+
+        <item name="android:textSize">@dimen/text_size_main5</item>
+        <item name="android:textColor">@color/mytheme_text_main2</item>
+    </style>
+
+    <style name="mbasestyle7">
+        <item name="android:textSize">@dimen/text_size_main4</item>
+        <item name="android:textColor">@color/mytheme_text_main2</item>
+    </style>
+
+    <style name="mbasestyle6">
+        <item name="android:textSize">@dimen/text_size_main5</item>
+        <item name="android:textColor">@color/mytheme_text_main3</item>
+    </style>
+
+    <style name="mbasestyle8">
+        <item name="android:textSize">@dimen/text_size_main5</item>
+        <item name="android:textColor">@color/mytheme_text_main4</item>
+    </style>
+    <style name="MyDialog" parent="@android:style/Theme.Holo.Dialog">
+        <!-- 是否有边框 -->
+        <item name="android:windowFrame">@null</item>
+        <!--是否在悬浮Activity之上  -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!--阴影  -->
+        <item name="android:windowIsTranslucent">true</item><!--半透明-->
+        <!--背景透明-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 还可以加入一些弹出和退出的动画 (lan)-->
+    </style>
+    <style name="mbasestyle9">
+        <item name="android:textSize">@dimen/text_size_main5</item>
+        <item name="android:textColor">@color/mytheme_bg_main2</item>
+    </style>
+
+    <style name="button" parent="mbasebuttonstyle">
+        <item name="android:background">@drawable/buttonkuang</item>
+    </style>
+
+    　
+
+    <style name="progress_bar_style" parent="@android:style/Widget.ProgressBar">
+        <item name="android:indeterminateDrawable">@drawable/progressbar</item>
+        　　
+    </style>
+
+    <style name="CollapsedTitle">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/titlesize</item>
+    </style>
+
+    <style name="ExpandedTitle" parent="Base.Widget.AppCompat.ActionBar.TabText">
+        <item name="android:textColor">@color/mytheme_text_main</item>
+        <item name="android:textSize">@dimen/titlesize</item>
+    </style>
+
+</resources>

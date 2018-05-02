@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/shucheng"
+        android:title="书城"
+        app:showAsAction="always"></item>
+    <item
+        android:id="@+id/barmore"
+        android:icon="@drawable/more_44"
+        android:title="更多"
+        app:showAsAction="always">
+        <menu>
+            <item
+                android:id="@+id/local"
+                android:title="导入本地书籍"
+                app:showAsAction="ifRoom" />
+            <item
+                android:id="@+id/about"
+                android:title="关于"
+                app:showAsAction="ifRoom" />
+        </menu>
+    </item>
+</menu>

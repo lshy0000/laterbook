@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="white">#ffffff</color>
+    <color name="white2">#00ffffff</color>
+    <color name="red">#ff6f6f</color>
+    <color name="green">#4bca88</color>
+    <color name="gray">#dee9f1</color>
+
+    <color name="lan_main_text_unselect">#91d2ff</color>
+    <color name="mytheme_bg_main">#2f9dea</color>
+    <color name="mytheme_bg_mainx">#2f7dea</color>
+    <color name="mytheme_bg_main2">#bcdbf9</color>
+
+    <color name="mytheme_click">#e8f2fc</color>
+    <color name="mytheme_text_main">#464c5b</color>
+    <color name="mytheme_text_main2">#657180</color>
+    <color name="mytheme_text_main3">#9ea7b4</color>
+    <color name="mytheme_text_main4">#c3cbd6</color>
+    <color name="mytheme_line_main">#d7dde4</color>
+    <color name="mytheme_bg_line">#f0f4f7</color>
+    <color name="mytheme_fz_main">#00e5ff</color>
+    <color name="mytheme_fz_main2">#f1ca1d</color>
+    <color name="mytheme_fz_main3">#ff6f6f</color>
+    <color name="mytheme_fz_main4">#4bca88</color>
+    <color name="mytheme_fz_m">#16e69f</color>
+    <color name="mytheme_shadow">#3f505d66</color>
+    <color name="mytheme_shadow2">#20505d66</color>
+    <color name="mytheme_shadow3">#00505d66</color>
+    <color name="new_bg_main">#f3f6f9</color>
+</resources>

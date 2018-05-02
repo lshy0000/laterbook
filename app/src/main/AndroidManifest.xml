@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.lsy.laterbook">
+
+    <application
+        android:name=".MApp"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher_v"
+        android:label="阅读学习"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".ui.ac.ShelfActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.ac.ShuChengActivity" />
+        <activity android:name=".ui.ac.FenleiActivity" />
+        <activity android:name=".ui.ac.SearchActivity" />
+        <activity android:name=".ui.ac.PaihangActivity" />
+        <activity android:name=".ui.ac.BookInfoActivity" />
+        <activity android:name=".ui.ac.ReadActivity" />
+        <activity
+            android:name="com.tencent.bugly.beta.ui.BetaActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@android:style/Theme.Translucent" />
+
+        <meta-data
+            android:name="BUGLY_APPID"
+            android:value="2f00299b24" />
+        <meta-data
+            android:name="BUGLY_KEY"
+            android:value="373b860d-71c9-431f-b489-105c57da24cb" />
+ 
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.fileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+        <meta-data
+            android:name="provider"
+            android:value="${applicationId}.fileProvider" />
+    </application>
+
+</manifest>

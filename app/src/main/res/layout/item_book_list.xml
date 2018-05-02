@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@drawable/whitekuang"
+    android:layout_height="wrap_content"
+ >
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/ivBookCover"
+        android:layout_width="140px"
+        android:layout_height="200px"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/touxiang80"
+        app:riv_border_color="#0000"
+        app:riv_border_width="1dp"
+        app:riv_corner_radius="3dp"
+        app:riv_oval="false" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="20dp"
+        android:layout_toEndOf="@+id/ivBookCover"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvBookTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="@string/app_name"
+            android:textColor="@color/mytheme_text_main"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/creator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="@string/app_name"
+            android:textColor="@color/mytheme_text_main2"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/shortcut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+
+            android:singleLine="true"
+            android:text="@string/app_name"
+            android:textColor="@color/mytheme_text_main3"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/fujia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="@string/app_name"
+            android:textColor="@color/mytheme_text_main4"
+            android:textSize="10sp" />
+    </LinearLayout>
+
+
+</RelativeLayout>

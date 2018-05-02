@@ -1,0 +1,127 @@
+def a = false
+if (a) {
+    apply plugin: 'com.android.application'
+} else {
+    apply plugin: 'com.android.library'
+}
+apply plugin: 'com.jakewharton.butterknife'
+apply plugin: 'maven'
+android {
+    compileSdkVersion build_versions.target_sdk
+    dataBinding {
+        enabled = true
+    }
+    defaultConfig {
+        minSdkVersion build_versions.min_sdk
+        targetSdkVersion build_versions.target_sdk
+        versionCode 1
+        versionName "1.0"
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [moduleName: project.getName()]
+                println("====== " + arguments + " ======" + project.getName())
+            }
+        }
+        vectorDrawables.useSupportLibrary = true
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    sourceSets {
+        main {
+            if (a) {
+                manifest.srcFile 'src/main/module/AndroidManifest.xml'
+            } else {
+                manifest.srcFile 'src/main/AndroidManifest.xml'
+                //集成开发模式下排除debug文件夹中的所有Java文件
+                java {
+                    exclude 'debug/**'
+                }
+            }
+        }
+    }
+    buildTypes {
+        release {
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            zipAlignEnabled false
+            shrinkResources false
+            minifyEnabled false
+            debuggable true
+            multiDexEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            zipAlignEnabled false
+            shrinkResources false
+            minifyEnabled false
+            debuggable true
+            multiDexEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    api fileTree(include: ['*.jar'], dir: 'libs')
+    // Support libraries
+    api deps.support.app_compat
+    api deps.support.v4
+    api deps.support.v13
+    api deps.support.design
+    api deps.support.cardview
+    api deps.support.percent
+    api deps.support.recyclerview
+    // RxJava and retrofit
+    api deps.rx_android
+    api deps.rxjava2
+    api deps.retrofit.runtime
+    api deps.retrofit.gson
+    api deps.retrofit.adapter
+    api deps.retrofit.scalars
+    api deps.okhttp_logging
+
+    api deps.gson
+    api deps.permission
+    api deps.glide
+
+    api deps.autolayout
+    api deps.butterknife
+    api deps.roundedimageview
+    api deps.statusbaruitl
+    api deps.swipe_recycler
+    //router
+    api deps.arouter_api
+
+    //annotationProcessor
+    //Dagger
+    api deps.dagger.runtime
+    api deps.dagger.android
+    api deps.dagger.android_support
+    annotationProcessor deps.dagger.android_support_compiler
+    annotationProcessor deps.dagger.compiler
+    annotationProcessor deps.arouter_compiler
+    annotationProcessor deps.butterknife_plugin
+
+    api 'com.amulyakhare:com.amulyakhare.textdrawable:1.0.1'
+    api 'com.github.yalantis:ucrop:2.2.1'
+    api 'com.android.support:support-vector-drawable:27.0.2'
+
+
+}
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            pom.groupId = "com.fro.tools"
+            pom.artifactId = "lib_common"
+            pom.version = "1.0.0"
+//                repository(url: "file://localhost/" + "Users/hepengcheng/Library/Android/sdk" + "/extras/android/m2repository/");
+            repository(url: "http://192.168.0.180:8081/nexus/content/repositories/android-lib") {
+                authentication(userName: "lishiyu", password: "123456")
+            }
+        }
+    }
+}

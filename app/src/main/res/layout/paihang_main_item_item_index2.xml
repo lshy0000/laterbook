@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/whitekuang"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:paddingBottom="30px"
+    android:paddingTop="30px">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:paddingStart="24px">
+
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/image2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:src="@mipmap/touxiang80"
+            android:scaleType="centerCrop"
+            app:riv_border_color="#0000"
+            app:riv_border_width="1px"
+            app:riv_corner_radius="20dp"
+            app:riv_oval="true" />
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingStart="24px"
+            android:text="投融资对接"
+            android:textColor="@color/mytheme_text_main"
+            android:textSize="36px" />
+    </LinearLayout>
+
+
+</com.zhy.autolayout.AutoLinearLayout>

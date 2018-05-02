@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/barmore"
+        android:icon="@drawable/more_44"
+        android:title="更多"
+        app:showAsAction="always">
+        <menu>
+            <item
+                android:id="@+id/join"
+                android:title="加入沙龙"
+                app:showAsAction="ifRoom" />
+            <item
+                android:id="@+id/exit"
+                android:title="退出沙龙"
+
+                app:showAsAction="ifRoom" />
+            <item
+                android:id="@+id/favorite"
+                android:title="收藏沙龙"
+                app:showAsAction="ifRoom" />
+            <item
+                android:id="@+id/share"
+                android:title="分        享"
+                app:showAsAction="ifRoom" />
+            <item
+                android:id="@+id/report"
+                android:title="举        报"
+                app:showAsAction="ifRoom" />
+            <item
+                android:id="@+id/edit"
+                android:title="编        辑"
+                app:showAsAction="ifRoom" />
+            <item
+                android:id="@+id/membermanager"
+                android:title="成员管理"
+                app:showAsAction="ifRoom" />
+            <item
+                android:id="@+id/member"
+                android:title="沙龙成员"
+                app:showAsAction="ifRoom" />
+            <item
+                android:id="@+id/publishtopic"
+                android:title="发布话题"
+                app:showAsAction="ifRoom" />
+            <item
+                android:id="@+id/publishactivties"
+                android:title="发布活动"
+                app:showAsAction="ifRoom" />
+            <item
+                android:id="@+id/publivideo"
+                android:title="发布视频"
+                app:showAsAction="ifRoom" />
+
+        </menu>
+    </item>
+</menu>

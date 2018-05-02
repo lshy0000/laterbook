@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <layer-list>
+            <item>
+                <shape>
+                    <padding android:bottom="3dp" android:right="3dp" />
+                </shape>
+            </item>
+            <item>
+                <selector>
+
+                    <item>
+                        <bitmap android:gravity="center|right" android:src="@mipmap/shang28" />
+                    </item>
+                </selector>
+
+
+            </item>
+        </layer-list>
+    </item>
+</selector>

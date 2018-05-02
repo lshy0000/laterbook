@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/barmore"
+        android:icon="@drawable/more_44"
+        android:title="更多"
+        app:showAsAction="always">
+        <menu>
+            <item
+                android:id="@+id/leader"
+                android:title="转让沙龙"
+                app:showAsAction="ifRoom" />
+            <item
+                android:id="@+id/blackname"
+                android:title="黑名单"
+                app:showAsAction="ifRoom" />
+
+        </menu>
+    </item>
+</menu>

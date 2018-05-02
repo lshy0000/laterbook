@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/whitekuang__index"
+    android:padding="36px">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/image"
+        android:layout_width="186px"
+        android:layout_height="186px"
+        android:layout_gravity="center"
+        android:scaleType="fitCenter"
+        android:src="@mipmap/touxiang80"
+        app:riv_border_color="#0000"
+        app:riv_border_width="2dip"
+        app:riv_oval="true"
+        app:riv_corner_radius="93px"
+        app:riv_mutate_background="false" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginStart="21px"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/test"
+            android:textColor="@color/mytheme_text_main"
+            android:textSize="42px" />
+
+        <TextView
+            android:id="@+id/school"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="18px"
+            android:paddingTop="18px"
+            android:text="@string/test"
+            android:textColor="@color/mytheme_text_main3"
+            android:textSize="36px" />
+
+        <TextView
+            android:id="@+id/fanscount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/test"
+            android:textColor="@color/mytheme_text_main3"
+            android:textSize="36px" />
+
+    </LinearLayout>
+
+    <ToggleButton
+        android:id="@+id/togglebutton"
+        android:layout_width="210px"
+        android:layout_height="84px"
+        android:layout_gravity="center"
+        android:layout_marginStart="36px"
+        android:background="@drawable/togglebutton_index"
+        android:checked="true"
+        android:textColor="@drawable/textselector_index"
+        android:textOff="已关注"
+        android:textOn="关注"
+        android:textSize="42px" />
+</com.zhy.autolayout.AutoLinearLayout>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:background="@color/new_bg_main"
+    android:padding="20px"
+   >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/whitekuang"
+        android:layout_gravity="center"
+     >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingStart="24px"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="小说"
+                android:textColor="@color/mytheme_text_main"
+                android:textSize="36px" />
+
+            <TextView
+                android:id="@+id/textcount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingTop="12px"
+                android:gravity="center"
+                android:text="123"
+                android:textColor="@color/mytheme_text_main4"
+                android:textSize="24px" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="36px">
+
+            <ImageView
+                android:id="@+id/i1"
+                android:layout_width="119px"
+                android:layout_height="170px"
+
+                android:layout_gravity="end|center_vertical"
+                android:src="@mipmap/touxiang80" />
+
+
+            <ImageView
+                android:id="@+id/i2"
+                android:layout_width="98px"
+                android:layout_height="140px"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginEnd="113px"
+                android:src="@mipmap/touxiang80" />
+
+            <com.chuangfeigu.tools.view.HKImageView
+                android:id="@+id/i3"
+                android:layout_width="140px"
+                android:layout_height="200px"
+                android:layout_gravity="end|center_vertical"
+                android:elevation="3dp"
+                android:layout_marginEnd="40px"
+                android:padding="5px"
+                android:src="@mipmap/touxiang80" />
+        </FrameLayout>
+
+    </LinearLayout>
+
+
+</com.zhy.autolayout.AutoLinearLayout>

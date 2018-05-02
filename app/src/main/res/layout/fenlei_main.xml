@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/mytheme_bg_main"
+        app:navigationIcon="@mipmap/ic_fanhui_index">
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:singleLine="true"
+            android:text="玄幻"
+            android:textColor="@color/white"
+            android:textSize="@dimen/titlesize" />
+    </android.support.v7.widget.Toolbar>
+
+
+    <RadioGroup
+        android:id="@+id/radiog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <RadioButton
+            android:id="@+id/hot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:button="@null"
+            android:text="    热门    "
+            android:textSize="39px"
+            android:textColor="@color/select_textcolor" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:button="@null"
+            android:text="    新书    "
+            android:textSize="39px"
+            android:textColor="@color/select_textcolor" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:button="@null"
+            android:text="    好评    "
+            android:textSize="39px"
+            android:textColor="@color/select_textcolor" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:button="@null"
+            android:text="    完结    "
+            android:textSize="39px"
+            android:textColor="@color/select_textcolor" />
+
+    </RadioGroup>
+
+    <include layout="@layout/recyclerviewnoswipe" />
+
+</LinearLayout>

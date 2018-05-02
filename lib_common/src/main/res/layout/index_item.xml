@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="36px"
+        android:layout_marginStart="36px"
+        android:layout_marginTop="36px"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="75px"
+            android:orientation="horizontal">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/touxiang"
+                android:layout_width="75px"
+                android:layout_height="75px"
+                android:layout_marginBottom="21px"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/grzy_bg"
+                app:riv_border_color="#0fff"
+                app:riv_border_width="1dp"
+                app:riv_corner_radius="38px"
+                app:riv_oval="true" />
+
+            <TextView
+                android:id="@+id/name"
+                style="@style/mbasestyle3"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="15px"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:maxWidth="200px"
+                android:text="@string/test"
+                android:textSize="42px" />
+
+            <TextView
+                android:id="@+id/time"
+                style="@style/mbasestyle4"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxEms="10"
+                android:maxLines="1"
+                android:text="@string/test"
+                android:textSize="36px" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/todetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:orientation="horizontal"
+            android:paddingBottom="36px"
+            android:paddingTop="21px">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15px"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/title"
+                    style="@style/mbasestyle"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15px"
+                    android:layout_marginTop="15px"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text="中文测试"
+                    android:textSize="48px" />
+
+                <TextView
+                    android:id="@+id/acttime"
+                    style="@style/mbasestyle8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18px"
+                    android:singleLine="true"
+                    android:text="中文测试"
+                    android:textSize="36px"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/image"
+                android:layout_width="300px"
+                android:layout_height="180px"
+                android:layout_gravity="center"
+                android:layout_marginStart="36px"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/chengguo_index"
+                android:visibility="gone"
+                app:riv_border_color="#0000"
+                app:riv_border_width="2dip"
+                app:riv_corner_radius="3px"
+                app:riv_mutate_background="true" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/cc"
+            android:layout_width="match_parent"
+            android:layout_height="105px"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <include layout="@layout/line" />
+
+            <ImageView
+                android:id="@+id/ischool"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/schoolpt_index" />
+
+            <TextView
+                android:id="@+id/group"
+                style="@style/mbasestyle3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_alignBaseline="@+id/zancount"
+                android:layout_alignBottom="@+id/zancount"
+                android:layout_marginStart="20px"
+                android:layout_toEndOf="@+id/ischool"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="@string/test"
+                android:textSize="36px" />
+
+
+            <TextView
+                android:id="@+id/pingluncount"
+                style="@style/mbasestyle4"
+                android:layout_width="105px"
+                android:layout_height="match_parent"
+                android:layout_alignBaseline="@+id/group"
+                android:layout_alignBottom="@+id/group"
+                android:layout_toStartOf="@+id/zanimg"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:text="121"
+                android:textSize="36px" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toStartOf="@id/pingluncount"
+                android:paddingEnd="14px"
+                android:paddingStart="28px"
+                android:src="@mipmap/pinglun_index" />
+            <ImageView
+                android:id="@+id/zanimg"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toStartOf="@id/zancount"
+                android:paddingEnd="14px"
+                android:paddingStart="28px"
+                android:src="@mipmap/zan_index" />
+
+            <TextView
+                android:id="@+id/zancount"
+                style="@style/mbasestyle4"
+                android:layout_width="105px"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:text="88888"
+                android:textSize="36px" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/ding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|top"
+        android:src="@mipmap/zhiding_index"
+        android:visibility="gone" />
+</com.zhy.autolayout.AutoFrameLayout>

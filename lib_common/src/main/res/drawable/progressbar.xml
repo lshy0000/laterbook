@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-rotate xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fromDegrees="0"
+    android:interpolator="@android:anim/accelerate_interpolator"
+    android:pivotX="50%"
+    android:pivotY="50%"
+    android:drawable="@mipmap/shuaxin"
+    android:toDegrees="720">
+
+    <!--<shape-->
+        <!--android:innerRadiusRatio="6"-->
+        <!--android:shape="ring"-->
+        <!--android:thicknessRatio="13"-->
+        <!--android:useLevel="false">-->
+        <!--<gradient-->
+            <!--android:centerColor="@color/mytheme_fz_main"-->
+            <!--android:centerY="0.50"-->
+            <!--android:endColor="@color/mytheme_bg_main"-->
+            <!--android:startColor="@color/mytheme_line_main"-->
+            <!--android:type="sweep"-->
+            <!--android:useLevel="false" />-->
+    <!--</shape>-->
+
+</animated-rotate>

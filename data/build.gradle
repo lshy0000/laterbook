@@ -1,0 +1,97 @@
+def a = false
+//a=isModule.toBoolean()
+if (a) {
+    apply plugin: 'com.android.application'
+} else {
+    apply plugin: 'com.android.library'
+}
+apply plugin: 'realm-android'
+apply plugin: 'maven'
+android {
+    repositories {
+//        flatDir {
+//            dirs '../flatdir'
+//        }
+    }
+    compileSdkVersion build_versions.target_sdk
+    dataBinding {
+        enabled = true
+    }
+    defaultConfig {
+        minSdkVersion build_versions.min_sdk
+        targetSdkVersion build_versions.target_sdk
+        versionCode 1
+        versionName "1.0"
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [moduleName: project.getName()]
+                println("====== " + arguments + " ======" + project.getName())
+            }
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    sourceSets {
+        main {
+            if (a) {
+                manifest.srcFile 'src/main/module/AndroidManifest.xml'
+            } else {
+                manifest.srcFile 'src/main/AndroidManifest.xml'
+                //集成开发模式下排除debug文件夹中的所有Java文件
+                java {
+                    exclude 'debug/**'
+                }
+            }
+        }
+    }
+    buildTypes {
+        release {
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            zipAlignEnabled false
+            shrinkResources false
+            minifyEnabled false
+            debuggable true
+            multiDexEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            zipAlignEnabled false
+            shrinkResources false
+            minifyEnabled false
+            debuggable true
+            multiDexEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+    annotationProcessor deps.dagger.android_support_compiler
+    annotationProcessor deps.dagger.compiler
+    annotationProcessor deps.arouter_compiler
+
+//    api 'com.fro.tools:lib_common:1.0.0'
+    api project(':lib_common')
+
+}
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            pom.groupId = "com.fro.tools"
+            pom.artifactId = "data"
+            pom.version = "1.0.0"
+//                repository(url: "file://localhost/" + "Users/hepengcheng/Library/Android/sdk" + "/extras/android/m2repository/");
+            repository(url: "http://192.168.0.180:8081/nexus/content/repositories/android-lib") {
+                authentication(userName: "lishiyu", password: "123456")
+            }
+        }
+    }
+}
